@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="model" type="com.example.healthlevel.models.TaskObject"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:background="@drawable/task_background"
+                                                       android:padding="10dp"
+                                                       android:layout_margin="5dp"
+
+    >
+
+        <TextView
+                android:id="@+id/taskTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@{model.theme}"
+                app:layout_constraintTop_toTopOf="parent"
+        />
+
+        <TextView
+                android:id="@+id/taskType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@{model.type}"
+                app:layout_constraintTop_toBottomOf="@id/taskTheme"
+        />
+
+        <TextView
+                android:id="@+id/taskRepeatTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@{model.repeatTime}"
+                app:layout_constraintTop_toBottomOf="@id/taskType"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
